@@ -1,0 +1,40 @@
+{
+    "name": "moto_test",
+    "version": "1.0.0",
+    "description": "This is clean project project for start",
+    "main": "index.js",
+    "scripts": {
+        "build": "webpack --mode production",
+        "dev": "webpack --mode development",
+        "http": "http-server build -p 7000 -o"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ZazzizzuzA/moto_test.git"
+    },
+    "author": "Michael P",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/ZazzizzuzA/moto_test/issues"
+    },
+    "homepage": "https://github.com/ZazzizzuzA/moto_test#readme",
+    "dependencies": {
+        "copy-webpack-plugin": "^4.5.1",
+        "css-loader": "^0.28.11",
+        "file-loader": "^1.1.11",
+        "html-webpack-plugin": "^3.2.0",
+        "html-webpack-pug-plugin": "^0.3.0",
+        "http-server": "^0.11.1",
+        "node-sass": "^4.9.0",
+        "npm": "^6.0.1",
+        "owl.carousel": "^2.3.4",
+        "pug": "^2.0.3",
+        "pug-loader": "^2.4.0",
+        "sass-loader": "^7.0.1",
+        "style-loader": "^0.20.3",
+        "url-loader": "^1.0.1",
+        "webpack": "^4.5.0",
+        "webpack-cli": "^2.0.14"
+    },
+    "devDependencies": {}
+}

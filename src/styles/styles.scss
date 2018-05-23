@@ -1,0 +1,15 @@
+@import '_var';
+@import '_reset';
+
+.block{
+    display: flex;
+    flex-flow: column wrap;
+    box-sizing: border-box;
+    &__item{
+        width: 100vw;
+        box-sizing: border-box;
+        height: 30vh;
+    }
+}
+
+@import '_adaptive'; 
