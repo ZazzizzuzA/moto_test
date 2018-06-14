@@ -7,7 +7,28 @@ html(lang="en")
     title Motorola
   body 
     div.block
-      main.block__item
+      main.block__item(class="main-page")
+        .owl-carousel.owl-theme
+          .item
+            img(src="./assets/images/grey_1_big.png", alt="phone")
+          .item
+            img(src="./assets/images/grey_2.png", alt="phone")
+          .item
+            img(src="./assets/images/grey_3.png", alt="phone")
+          .item
+            img(src="./assets/images/grey_4.png", alt="phone")
+          .item
+            img(src="./assets/images/grey_5.png", alt="phone")
+          .item
+            img(src="./assets/images/grey_6.png", alt="phone")
+        .block__item_main-title
+          img(src="./assets/images/Moto_G5S.png", alt="logo" class="block__item_main-title_logotype")
+          .block__item_main-title_slogan Дизайн — підкорює <br> Можливості — надихають
+
+          .block__item_main-title_uniq Продуктивність в унікальному металевому дизайні.<br>Працюй весь день та миттєво заряджайся з TurboPower™
+
+          button.block__item_main-title_button Придбати
+
       article.block__item
       article.block__item
       section.block__item
@@ -26,6 +47,6 @@ html(lang="en")
       article.block__item
       article.block__item
       div.block__item(class="iframe_video")
-        iframe(src="", frameborder="0", class="block__item_frame")    
+        iframe(src="https://www.youtube.com/embed/DkeiKbqa02g", frameborder="0", class="block__item_frame")    
       article.block__item
-      section.block__item 
+      section.block__item

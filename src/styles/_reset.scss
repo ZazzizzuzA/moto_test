@@ -5,7 +5,7 @@ ol {
     margin: 0;
     padding: 0;
     font-size: 16px;
-    font-family: 'OpenSans-Regular', sans-serif;
+    font-family: 'GothamProRegular', sans-serif;
 }
 
 h1,
@@ -16,4 +16,75 @@ h5,
 h6,
 p {
     margin: 0;
+}
+
+@font-face {
+    font-family: 'GothamProBlack';
+    src: url('../../assets/fonts/GothamPro/GothamProBlack/GothamProBlack.woff'), url('../../assets/fonts/GothamPro/GothamProBlack/GothamProBlack.ttf'), url('../../assets/fonts/GothamPro/GothamProBlack/GothamProBlack.eot');
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+@font-face {
+    font-family: 'GothamProBlackItalic';
+    src: url('../../assets/fonts/GothamPro/GothamProBlackItalic/GothamProBlackItalic.woff'), url('../../assets/fonts/GothamPro/GothamProBlackItalic/GothamProBlackItalic.ttf'), url('../../assets/fonts/GothamPro/GothamProBlackItalic/GothamProBlackItalic.eot');
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+@font-face {
+    font-family: 'GothamProBold';
+    src: url('../../assets/fonts/GothamPro/GothamProBold/GothamProBold.woff'), url('../../assets/fonts/GothamPro/GothamProBold/GothamProBold.ttf'), url('../../assets/fonts/GothamPro/GothamProBold/GothamProBold.eot');
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+@font-face {
+    font-family: 'GothamProBoldItalic';
+    src: url('../../assets/fonts/GothamPro/GothamProBoldItalic/GothamProBoldItalic.woff'), url('../../assets/fonts/GothamPro/GothamProBoldItalic/GothamProBoldItalic.ttf'), url('../../assets/fonts/GothamPro/GothamProBoldItalic/GothamProBoldItalic.eot');
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+@font-face {
+    font-family: 'GothamProItalic';
+    src: url('../../assets/fonts/GothamPro/GothamProItalic/GothamProItalic.woff'), url('../../assets/fonts/GothamPro/GothamProItalic/GothamProItalic.ttf'), url('../../assets/fonts/GothamPro/GothamProItalic/GothamProItalic.eot');
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+@font-face {
+    font-family: 'GothamProLight';
+    src: url('../../assets/fonts/GothamPro/GothamProLight/GothamProLight.woff'), url('../../assets/fonts/GothamPro/GothamProLight/GothamProLight.ttf'), url('../../assets/fonts/GothamPro/GothamProLight/GothamProLight.eot');
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+@font-face {
+    font-family: 'GothamProLightItalic';
+    src: url('../../assets/fonts/GothamPro/GothamProLightItalic/GothamProLightItalic.woff'), url('../../assets/fonts/GothamPro/GothamProLightItalic/GothamProLightItalic.ttf'), url('../../assets/fonts/GothamPro/GothamProLightItalic/GothamProLightItalic.eot');
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+@font-face {
+    font-family: 'GothamProMedium';
+    src: url('../../assets/fonts/GothamPro/GothamProMedium/GothamProMedium.woff'), url('../../assets/fonts/GothamPro/GothamProMedium/GothamProMedium.ttf'), url('../../assets/fonts/GothamPro/GothamProMedium/GothamProMedium.eot');
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+@font-face {
+    font-family: 'GothamProMediumItalic';
+    src: url('../../assets/fonts/GothamPro/GothamProMediumItalic/GothamProMediumItalic.woff'), url('../../assets/fonts/GothamPro/GothamProMediumItalic/GothamProMediumItalic.ttf'), url('../../assets/fonts/GothamPro/GothamProMediumItalic/GothamProMediumItalic.eot');
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+@font-face {
+    font-family: 'GothamProRegular';
+    src: url('../../assets/fonts/GothamPro/GothamProRegular/GothamProRegular.woff'), url('../../assets/fonts/GothamPro/GothamProRegular/GothamProRegular.ttf'), url('../../assets/fonts/GothamPro/GothamProRegular/GothamProRegular.eot');
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
 }
