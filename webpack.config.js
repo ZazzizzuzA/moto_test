@@ -10,6 +10,7 @@ module.exports = {
     output: {
         filename: "[name].js",
         path: path.resolve(__dirname, "build"),
+        pathinfo: false
     },
     resolve: {
         extensions: [".js", ".json", ".scss", ".css"],
@@ -22,27 +23,37 @@ module.exports = {
         rules: [{
                 test: /\.css$/,
                 use: [
-                    { loader: "css-loader" }
+                    "css-loader"
                 ]
             },
             {
                 test: /\.scss$/,
                 use: [
-                    { loader: "style-loader" },
-                    { loader: "css-loader" },
-                    { loader: "sass-loader" }
+                    "style-loader",
+                    "css-loader",
+                    "sass-loader"
                 ]
             },
             {
                 test: /\.(woff|woff2|eot|ttf|otf)$/,
-                loader: "file-loader"
+                use:{
+                    loader: "file-loader",
+                    options: {
+                        emitFile: false,
+                        name: '[path][name].[ext]',
+                    }
+                } 
             },
             {
                 test: /\.(png|jpg|gif|svg)$/,
-                options: {
-                    limit: 8000,
-                },
-                loader: "url-loader"
+                use: {
+                    loader: "url-loader",
+                    options: {
+                        emitFile: false,
+                        name: '[path][name].[ext]',
+                        limit: 8000,
+                    }
+                }  
             },
             {
                 test: /\.pug$/,
@@ -59,6 +70,7 @@ module.exports = {
             $: 'jquery',
             jQuery: 'jquery',
             'window.jQuery': 'jquery'
-          }),
+        }),
+
     ]
 }
