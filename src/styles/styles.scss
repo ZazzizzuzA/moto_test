@@ -231,6 +231,118 @@
             }
         }
     }
+    &__item:nth-child(5){
+        @include background(url(../../assets/images/bg_green.jpg), no-repeat, 100%, 50% 50%);
+        box-sizing: border-box;
+        height: 800px;
+        .block__item_article {
+            box-sizing: border-box;
+            float: right;
+            width: 45%;
+            height: 100%;
+            padding: 200px 200px 200px 0px;
+            &-title {
+                font-size: 51px;
+                font-family: 'GothamProBold';
+                padding: 20px 0px;
+            }
+            &-subtitle {
+                font-size: 30px;
+                font-family: 'GothamProBold';
+            }
+            &-text {
+                font-size: 23px;
+                font-family: 'GothamProRegular';
+                max-width: 500px;
+                padding: 60px 0px 0px 0px;
+                line-height: 1.3em;
+                color: #ffffff;
+            }
+        }
+        .block__item_picture{
+            width: 50%;
+            float: left;
+            height: 100%;
+            @include background(url(../../assets/images/bg_green_img.jpg), no-repeat, 100%, 50% 50%);
+        }
+    }
+    &__item:nth-child(6) {
+        height: 860px;
+        box-sizing: border-box;
+        .block__item_article{
+            box-sizing: border-box;
+            float: right;
+            width: 45%;
+            height: 100%;
+            padding: 200px 200px 200px 0px;
+            &-title {
+                font-size: 51px;
+                font-family: 'GothamProBold';
+                padding: 20px 0px;
+            }
+            &-subtitle {
+                font-size: 30px;
+                font-family: 'GothamProBold';
+            }
+            &-text {
+                font-size: 23px;
+                font-family: 'GothamProRegular';
+                max-width: 740px;
+                padding: 60px 0px 0px 0px;
+                line-height: 1.3em;
+            }
+        }
+        .block__item_image{
+            width: 50%;
+            float: left;
+            height: 100%;
+            padding-left: 80px;
+            img{
+                max-height: 100%;
+            }
+        }
+    }
+    &__item:nth-child(7) {
+        @include background(url(../../assets/images/bg_gaming.jpg), no-repeat, cover, 50% 50%);
+        height: 860px;
+        box-sizing: border-box;
+        display: flex;
+        .block__item_article{
+            box-sizing: border-box;
+            width: 50%;
+            height: 100%;
+            padding: 100px 0px 0px 200px;
+            &-title {
+                font-size: 51px;
+                font-family: 'GothamProBold';
+                width: 820px;
+            }
+            &-subtitle {
+                font-size: 30px;
+                font-family: 'GothamProBold';
+                padding-top: 50px;
+            }
+            &-text {
+                font-size: 23px;
+                font-family: 'GothamProRegular';
+                max-width: 650px;
+                padding: 40px 0px 0px 0px;
+                line-height: 1.3em;
+                color: #ffffff;
+            }
+        }
+        .block__item_image{
+            position: relative;
+            width: 50%;
+            height: 100%;
+            img{
+                position: absolute;
+                right: 0;
+                bottom: 100px;
+                width: 950px;
+            }
+        }
+    }
     .iframe_video {
         height: 100vh;
         max-width: 100%;
