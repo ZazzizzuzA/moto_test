@@ -1,6 +1,8 @@
 import "./styles/styles";
 import 'owl.carousel';
 
+    /*----slider----*/
+
 $(document).ready(function () {
     $('.owl-carousel').owlCarousel({
         loop: true,
@@ -14,3 +16,24 @@ $(document).ready(function () {
         navText: ["<img class='owl-nav-buttons_img' src='../assets/images/arrow.png'>", "<img class='owl-nav-buttons_img' src='../assets/images/arrow.png'>"]
     })
 })
+
+/*----последний блок, show-hide----*/
+
+let block = document.getElementById("technicalParams"),
+    button = document.getElementById('buttonForShow'),
+    buttonSpan = Array.from(button.getElementsByTagName('span')),
+    currentPosition = window.pageYOffset;
+
+
+    function smoothOpen() {
+    
+        block.classList.toggle('hide');     
+
+        let pos = window.pageYOffset;
+
+    }
+    function scrollToBlock() {
+
+    }
+
+button.addEventListener( 'click', smoothOpen );
