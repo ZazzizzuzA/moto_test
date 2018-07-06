@@ -5,7 +5,7 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
     title Motorola
-  body 
+  body.adaptive
     div.block
       main.block__item.main-page
         .owl-carousel.owl-theme
@@ -22,7 +22,7 @@ html(lang="en")
           .item
             img(src="./assets/images/grey_6.png", alt="phone")
         .block__item_main-title
-          img(src="./assets/images/Moto_G5S.png", alt="logo" class="block__item_main-title_logotype")
+          img(src="./assets/images/Moto_G5S.png", alt="logo" class="block__item_main-title_logotype animated fadeInDown")
           .block__item_main-title_slogan.orange Дизайн — підкорює <br> Можливості — надихають
           .block__item_main-title_uniq Продуктивність в унікальному металевому дизайні.<br>Працюй весь день та миттєво заряджайся з TurboPower™
           button.block__item_main-title_button Придбати
@@ -123,7 +123,7 @@ html(lang="en")
               img(src="./assets/images/param_6.png", alt="")
         .block__item_properties-more
           div#buttonForShow
-            span
+            span.rotate-span
             span
           p переглянути детальні характеристики
       section.block__item.hide#technicalParams
@@ -161,5 +161,5 @@ html(lang="en")
           .title Розміри
           .param Ширина: 73,5 мм <br>Висота: 150 мм <br> Товщина: 8,2 мм 
         .block__item_tech-params
-          .title Вага
+          .title#rrr Вага
           .param 157 г

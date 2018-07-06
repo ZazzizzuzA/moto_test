@@ -21,19 +21,32 @@ $(document).ready(function () {
 
 let block = document.getElementById("technicalParams"),
     button = document.getElementById('buttonForShow'),
-    buttonSpan = Array.from(button.getElementsByTagName('span')),
-    currentPosition = window.pageYOffset;
+    buttonSpan = Array.from(button.getElementsByTagName('span'));
 
 
     function smoothOpen() {
-    
+
         block.classList.toggle('hide');     
+        buttonSpan[0].classList.toggle('rotate-span');
 
-        let pos = window.pageYOffset;
-
+        let buttonCoords = button.getBoundingClientRect(),
+            pos = window.pageYOffset,
+            buttonTop = buttonCoords.top;
+        
+        function scrollToBottom() {
+            if (buttonTop > -120 && buttonTop < 200 ) {
+                window.scrollBy(0, 15);
+                buttonTop = buttonTop - 15;
+                setTimeout(scrollToBottom, 20);
+            } else if ( buttonTop > -120 ) {
+                window.scrollBy(0, 25);
+                buttonTop = buttonTop - 25;
+                setTimeout(scrollToBottom, 20);
+            }
+        }
+        if (block.classList.contains('hide') == false) {
+            scrollToBottom();
+        }
     }
-    function scrollToBlock() {
-
-    }
-
+    
 button.addEventListener( 'click', smoothOpen );

@@ -49,6 +49,16 @@
             }
             &_logotype {
                 width: 280px;
+                animation-delay: 1s;
+                animation-iteration-count: 1;
+                animation-duration: 2s;
+                -webkit-animation-iteration-count: 1;
+                -webkit-animation-delay: 1s;
+                -webkit-animation-duration: 2s;
+                -moz-animation-iteration-count: 1;
+                -moz-animation-delay: 1s;
+                -moz-animation-duration: 2s;                
+                
             }
         }
         
@@ -56,7 +66,7 @@
     &__item:nth-child(2) {
         position: relative;
         background-color: rgb(216, 216, 216);
-        padding: 60px 200px 60px 0px;
+        padding: 60px 100px 60px 0px;
         
         .block__item_article {
             float: right;
@@ -94,21 +104,25 @@
         position: relative;
         height: 100vh;
         @include background(url(../../assets/images/1_01.jpg), no-repeat, 100%, 50% 20%);
-        padding: 30px 90px;
+        padding: 30px 60px;
         display: flex;
         flex-flow: row nowrap;
+        align-items: center;
         .owl-carousel {
             position: relative;
             width: 50%;
             .item {
-                max-height: 90%;
+                height: 90%;
+                img{
+                    min-height: 555px;
+                }
             }
             .owl-nav {
                 position: absolute;
                 display: flex;
                 justify-content: space-between;
-                width: 70%;
-                left: 12.5%;
+                width: 85%;
+                left: 6.5%;
                 bottom: calc(50% - 29px);
                 .owl-nav-buttons_img {
                     height: 30px;
@@ -147,7 +161,7 @@
         justify-content: space-between;
         .block__item_article {
             box-sizing: border-box;
-            flex-grow: 2; 
+            z-index: 1;
             &-title {
                 font-size: 51px;
                 font-family: 'GothamProBold';
@@ -191,7 +205,7 @@
             justify-content: center;
             &-text{
                 box-sizing: border-box;
-                margin-left: 50px;
+                flex: 1;
                 h4 {
                     font-size: 30px;
                     font-family: 'GothamProBold';
@@ -204,44 +218,46 @@
                     max-width: 440px;
                     padding: 60px 0px 50px 0px;
                     line-height: 1.3em;
-                    
                 }
             }
+            
             &-photo-1 {
-                @include background(url(../../assets/images/prof.png), no-repeat, 1200px, 50% 50%);
+                @include background(url(../../assets/images/prof.png), no-repeat, contain, 50% 50%);
                 flex: 3;
                 max-width: 65%;
                 height: 550px;
-                margin-right: 100px;
+                margin-right: 50px;
      
             }
             &-photo-2 {
-                @include background(url(../../assets/images/ready.png), no-repeat, 1200px, 50% 50%);
+                @include background(url(../../assets/images/ready.png), no-repeat, contain, 50% 50%);
                 flex: 3;
                 max-width: 65%;
                 height: 550px;
-                margin-left: 50px;
             }
             &-photo-3 {
-                @include background(url(../../assets/images/more_beauty.png), no-repeat, 1200px, 50% 50%);
+                @include background(url(../../assets/images/more_beauty.png), no-repeat, contain, 50% 50%);
                 flex: 3;
                 max-width: 65%;
                 height: 550px;
-                margin-right: 100px;
+                margin-right: 50px;
          
             }
         }
+        .block__item_description:nth-child(2){
+            padding-left: 100px;
+        }
     }
     &__item:nth-child(5){
-        @include background(url(../../assets/images/bg_green.jpg), no-repeat, 100%, 50% 50%);
-        box-sizing: border-box;
-        height: 800px;
+        @include background(url(../../assets/images/bg_green.jpg), no-repeat, cover, 50% 50%);
+        display: flex;
         .block__item_article {
             box-sizing: border-box;
-            float: right;
-            width: 45%;
-            height: 100%;
-            padding: 200px 200px 200px 0px;
+            padding: 100px 0px 100px 70px;
+            flex: 1;
+            display: flex;
+            flex-flow: column wrap;
+            margin: auto;
             &-title {
                 font-size: 51px;
                 font-family: 'GothamProBold';
@@ -261,21 +277,23 @@
             }
         }
         .block__item_picture{
-            width: 50%;
-            float: left;
-            height: 100%;
-            @include background(url(../../assets/images/bg_green_img.jpg), no-repeat, 100%, 50% 50%);
+            @include background(url(../../assets/images/bg_green_img.jpg), no-repeat, cover, 50% 50%);
+            flex: 1;
+            height: 700px;
+
         }
     }
     &__item:nth-child(6) {
-        height: 860px;
+        
         box-sizing: border-box;
+        display: flex;
         .block__item_article{
             box-sizing: border-box;
-            float: right;
-            width: 45%;
-            height: 100%;
-            padding: 200px 200px 200px 0px;
+            flex: 1;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: center;
+            padding-left: 70px;
             &-title {
                 font-size: 51px;
                 font-family: 'GothamProBold';
@@ -294,12 +312,11 @@
             }
         }
         .block__item_image{
-            width: 50%;
-            float: left;
-            height: 100%;
-            padding-left: 80px;
+
+            
+            flex: 1;
             img{
-                max-height: 100%;
+                max-width: 100%;
             }
         }
     }
@@ -487,14 +504,14 @@
                     transition: all .25s linear;
                     
                 }
-                span:first-child{
+                .rotate-span{
                     transform: rotate(90deg);
                 }
  
             }
             div:hover{
                
-                    transform: rotate(720deg) scale(1.3);
+                transform: rotate(720deg) scale(1.3);
                 
             }
             p{
@@ -510,7 +527,7 @@
         padding: 50px 200px 10px 200px;
         transition: all .7s ease-out;
         overflow: hidden;
-        height: 1000px;
+        height: 1020px;
         .block__item_tech-params{
             display: flex;
             color: rgb(38,98,102);
