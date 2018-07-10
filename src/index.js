@@ -34,14 +34,14 @@ let block = document.getElementById("technicalParams"),
             buttonTop = buttonCoords.top;
         
         function scrollToBottom() {
-            if (buttonTop > -120 && buttonTop < 200 ) {
+            if (buttonTop > -140 && buttonTop < 200 ) {
                 window.scrollBy(0, 15);
                 buttonTop = buttonTop - 15;
-                setTimeout(scrollToBottom, 20);
-            } else if ( buttonTop > -120 ) {
+                setTimeout(scrollToBottom, 15);
+            } else if ( buttonTop > -140 ) {
                 window.scrollBy(0, 25);
                 buttonTop = buttonTop - 25;
-                setTimeout(scrollToBottom, 20);
+                setTimeout(scrollToBottom, 15);
             }
         }
         if (block.classList.contains('hide') == false) {

@@ -97,6 +97,7 @@
                 position: absolute;
                 left: 0;
                 top: -170px;
+                z-index: 10;
             }
         }
     }
@@ -155,21 +156,29 @@
     }
     &__item:nth-child(3){
         @include background(url(../../assets/images/bg_block_3.jpg), no-repeat, cover, 50% 20%);
-        padding: 150px 0px 150px 200px;
+        position: relative;
         overflow: hidden;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
+        align-items: center;
         .block__item_article {
             box-sizing: border-box;
+            flex: 1;
             z-index: 1;
+            padding-top: 100px;
+            display: flex;
+            flex-flow: column wrap;
+            align-items: flex-end;
             &-title {
                 font-size: 51px;
                 font-family: 'GothamProBold';
                 padding: 20px 0px;
+                width: 740px;
             }
             &-subtitle {
                 font-size: 30px;
                 font-family: 'GothamProBold';
+                width: 740px;
             }
             &-text {
                 font-size: 23px;
@@ -181,15 +190,14 @@
             }
         }
         .block__item_image{
-            position: relative;
-            overflow: visible;
-            flex-grow: 1;  
-            img{
-                position: absolute;
-                right: 0;
-                top: 0;
-                transform: rotate(-5deg);
-            }
+            flex: 1;  
+        }
+        img{
+            position: absolute;
+            right: 0;
+            bottom: -70px;
+            transform: rotate(-10deg);
+            max-height: 100%;
         }
     }
     &__item:nth-child(4){
@@ -277,14 +285,14 @@
             }
         }
         .block__item_picture{
-            @include background(url(../../assets/images/bg_green_img.jpg), no-repeat, cover, 50% 50%);
+            @include background(url(../../assets/images/bg_green_img.jpg), no-repeat, cover, 30% 50%);
             flex: 1;
             height: 700px;
 
         }
     }
     &__item:nth-child(6) {
-        
+        align-items: center;
         box-sizing: border-box;
         display: flex;
         .block__item_article{
@@ -307,7 +315,7 @@
                 font-size: 23px;
                 font-family: 'GothamProRegular';
                 max-width: 740px;
-                padding: 60px 0px 0px 0px;
+                padding: 60px 0px 60px 0px;
                 line-height: 1.3em;
             }
         }
@@ -322,52 +330,59 @@
     }
     &__item:nth-child(7) {
         @include background(url(../../assets/images/bg_gaming.jpg), no-repeat, cover, 50% 50%);
+        position: relative;
         height: 860px;
         box-sizing: border-box;
         display: flex;
+        justify-content: center;
         .block__item_article{
             box-sizing: border-box;
-            width: 50%;
-            height: 100%;
-            padding: 100px 0px 0px 200px;
+            padding-top: 100px;
+            overflow: visible;
+            z-index: 1;
+            display: flex;
+            flex-flow: column wrap;
+            flex: 1;
+            max-width: 650px;
             &-title {
                 font-size: 51px;
                 font-family: 'GothamProBold';
-                width: 820px;
+                width: 850px;
             }
             &-subtitle {
                 font-size: 30px;
                 font-family: 'GothamProBold';
                 padding-top: 50px;
+     
             }
             &-text {
                 font-size: 23px;
                 font-family: 'GothamProRegular';
-                max-width: 650px;
-                padding: 40px 0px 0px 0px;
+                padding-top: 40px;
                 line-height: 1.3em;
                 color: #ffffff;
             }
         }
         .block__item_image{
-            position: relative;
-            width: 50%;
-            height: 100%;
-            img{
-                position: absolute;
-                right: 0;
-                bottom: 100px;
-                width: 950px;
-            }
+           flex: 0.5;
+        }
+        img{
+            position: absolute;
+            right: 0;
+            margin: auto auto;
+            bottom: calc(50% - 300px);
+            max-width: 50%;
+            max-height: 100%;
         }
     }
     &__item:nth-child(8) {
         box-sizing: border-box;
         display: flex;
         align-items: center;
+        justify-content: space-around;
         .block__item_article{
             box-sizing: border-box;
-            width: 50%;
+            flex:1;
             height: 100%;
             &-title {
                 font-size: 51px;
@@ -387,10 +402,9 @@
             }
         }
         .block__item_image{
-            width: 45%;
-            float: left;
+            flex:1;
+            text-align: center;
             height: 100%;
-            padding-left: 80px;
             img{
                 max-height: 100%;
             }
@@ -401,14 +415,16 @@
         box-sizing: border-box;
         display: flex;
         align-items: center;
+        justify-content: center;
         .block__item_article{
             box-sizing: border-box;
-            flex-grow: 1;
-            padding-left: 200px;
+            flex: 1;
+            padding: 70px 0px 70px 0px;
+            max-width: 40%;
             &-title {
                 font-size: 51px;
                 font-family: 'GothamProBold';
-                width: 820px;
+       
             }
             &-subtitle {
                 font-size: 30px;
@@ -426,10 +442,10 @@
         }
         .block__item_image{
             position: relative;
-            flex-grow: 1;
+            flex: 1;
+            max-width: 45%;
             img{
-                position: relative;
-                right: 100px;
+                max-width: 90%;
                 max-height: 100%; 
             }
         }
@@ -440,7 +456,7 @@
     }
     &__item:nth-child(11) {
         color: rgb(38,98,102);
-        padding: 80px 200px 20px 200px;
+        padding: 80px 100px 40px 100px;
         .block__item_title-tech {
             font-size: 51px;
             font-family: 'GothamProBold';
@@ -451,8 +467,8 @@
             justify-content: center;
             align-items: center;
             &-img{
-                @include background(url(../../assets/images/all_phones.png), no-repeat, contain, 50% 50%);
-                flex: 1.3;
+                @include background(url(../../assets/images/all_phones.png), no-repeat, 100%, 50% 50%);
+                flex: 1;
                 height: 80vh;
             }
             &-text{
@@ -524,10 +540,10 @@
     }
     &__item:last-child {
         position: relative;
-        padding: 50px 200px 10px 200px;
+        padding: 0px 100px 10px 100px;
         transition: all .7s ease-out;
         overflow: hidden;
-        height: 1020px;
+        height: 105vh;
         .block__item_tech-params{
             display: flex;
             color: rgb(38,98,102);
