@@ -8,7 +8,7 @@ html(lang="en")
   body.adaptive
     div.block
       main.block__item.main-page
-        .owl-carousel.owl-theme
+        .owl-carousel.owl-theme.animated.fadeInUp
           .item
             img(src="./assets/images/grey_1_big.png", alt="phone")
           .item
@@ -33,17 +33,17 @@ html(lang="en")
           .block__item_article-subtitle.orange Акумулятор 3000 мАг
           .block__item_article-text Хвилюватися про заряд смартфона більше не доведеться. Акумулятора ємністю 3000 мАг вистачить на весь день. А зарядний пристрій TurboPower™ за 15 хвилин додасть до 6 годин роботи смартфону.
         .block__item_image
-          img(src="./assets/images/battery.png" alt="battery")
+          img(src="./assets/images/battery.png" alt="battery" class="animate-target-left duration")
       article.block__item
         .block__item_article
           .block__item_article-title.orange Камери
           .block__item_article-subtitle.orange Подвійна основна камера 16 МП <br> Фронтальна камера 5 МП
           .block__item_article-text Ви не пропустите жодного важливого моменту. Moto G5S має 16-мегапіксельну камеру з надчітким автофокусуванням. <br><br>У групові селфі потраплять усі друзі, завдяки <br>5-мегапіксельній фронтальній камері з ширококутним об'єктивом та LED-спалахом.
         .block__item_image
-        img(src="./assets/images/Exploded-Camera.png" alt="Exploded-Camera")
+        img(src="./assets/images/Exploded-Camera.png" alt="Exploded-Camera" class="animate-target-right duration")
       section.block__item
         div.block__item_description
-          div.block__item_description-photo-1
+          div.block__item_description-photo-1(class="animate-target-left duration")
           div.block__item_description-text 
             h4 Професійний режим
             p Професійні функції цифрової камери тепер завжди під рукою. Відрегулюйте баланс білого, витримку, ISO, експозицію та фокус. Змінюйте налаштування одним натисканням і самостійно контролюйте результат.
@@ -52,9 +52,9 @@ html(lang="en")
           div.block__item_description-text
             h4 Завжди готовий до фото
             p Доступ до основної камери можна отримати миттєво за допомогою спеціального Moto-жеста. Просто зробіть 2 кругових рухи зап'ястям і камера буде запущена автоматично, навіть якщо смартфон був заблокований.
-          div.block__item_description-photo-2
+          div.block__item_description-photo-2(class="animate-target-right duration")
         div.block__item_description
-          div.block__item_description-photo-3
+          div.block__item_description-photo-3(class="animate-target-left duration")
           div.block__item_description-text
             h4 Більше краси!
             p Додайте лоску до власних селфі. Спеціальний режим прибере зморшки або почервоніння на обличчі. Селфі обробляються автоматично - ви завжди будете ідеально виглядали на фотографіях.
@@ -66,7 +66,7 @@ html(lang="en")
           .block__item_article-text Ширококутний об'єктив 5-мегапіксельної фронтальної камери нікого не залишить поза кадром. Завдяки LED-спалаху ваші селфі будуть приголомшливі навіть за умов недостатнього освітлення.
       article.block__item
         .block__item_image
-          img(src="./assets/images/grey_1_big.png" alt="grey")
+          img(src="./assets/images/grey_1_big.png" alt="grey" class="animate-target-left duration")
         .block__item_article
           .block__item_article-title.orange Стиль та дизайн
           .block__item_article-subtitle.orange Металевий корпус та яскравий<br>5,2-дюймовий Full HD дисплей
@@ -79,10 +79,10 @@ html(lang="en")
           .block__item_article-subtitle.orange Вдосталь пам’яті
           .block__item_article-text 32 ГБ вбудованої пам’яті достатньо для програм, музики, фільмів та фото. Хочете мати більше? Легко збільшуйте пам’ять смартфона до 128 ГБ за допомогою картки microSD.
         .block__item_image
-        img(src="./assets/images/gaming.png" alt="grey")
+        img(src="./assets/images/gaming.png" alt="grey" class="animate-target-right duration")
       article.block__item
         .block__item_image
-          img(src="./assets/images/android.png" alt="grey")
+          img(src="./assets/images/android.png" alt="grey" class="animate-target-left duration")
         .block__item_article
           .block__item_article-title.orange Чистий Android™
           .block__item_article-subtitle.orange Android Nougat 7.1
@@ -95,13 +95,13 @@ html(lang="en")
           .block__item_article-subtitle.orange Навігація одним дотиком
           .block__item_article-text Використовуйте сканер відбитків пальців в якості функціональної навігаційної кнопки.
         .block__item_image
-          img(src="./assets/images/scanner.png" alt="grey")
+          img(src="./assets/images/scanner.png" alt="grey" class="animate-target-right duration")
       div.block__item(class="iframe_video")
         iframe(src="https://www.youtube.com/embed/DkeiKbqa02g", frameborder="0", class="block__item_frame")
       article.block__item
         h3.block__item_title-tech Технічні характеристики
         .block__item_properties
-          .block__item_properties-img
+          .block__item_properties-img(class="animate-target-left duration")
           .block__item_properties-text
             .parametrs
               p 5.2 " Full HD IPS дисплей

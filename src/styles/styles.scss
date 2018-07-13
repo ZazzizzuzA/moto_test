@@ -92,7 +92,6 @@
         .block__item_image{
             position: relative;
             overflow: visible;
-            left: 0px;    
             img{
                 position: absolute;
                 left: 0;
@@ -112,6 +111,15 @@
         .owl-carousel {
             position: relative;
             width: 50%;
+            animation-delay: 0.5s;
+            animation-iteration-count: 1;
+            animation-duration: 2.5s;
+            -webkit-animation-iteration-count: 1;
+            -webkit-animation-delay: 0.5s;
+            -webkit-animation-duration: 2.5s;
+            -moz-animation-iteration-count: 1;
+            -moz-animation-delay: 0.5s;
+            -moz-animation-duration: 2.5s;    
             .item {
                 height: 90%;
                 img{
@@ -165,25 +173,25 @@
             box-sizing: border-box;
             flex: 1;
             z-index: 1;
-            padding-top: 100px;
+            padding: 100px 0px 0px 100px;
             display: flex;
             flex-flow: column wrap;
             align-items: flex-end;
+            max-width: 60%;
             &-title {
                 font-size: 51px;
                 font-family: 'GothamProBold';
                 padding: 20px 0px;
-                width: 740px;
+                width: 100%;
             }
             &-subtitle {
                 font-size: 30px;
                 font-family: 'GothamProBold';
-                width: 740px;
+                width: 100%;
             }
             &-text {
                 font-size: 23px;
                 font-family: 'GothamProRegular';
-                max-width: 740px;
                 padding: 60px 0px 100px 0px;
                 line-height: 1.3em;
                 color: #ffffff;
@@ -201,7 +209,7 @@
         }
     }
     &__item:nth-child(4){
-        padding: 140px 85px;
+        padding: 100px 60px;
         display: flex;
         flex-flow: column wrap;
         .block__item_description {
@@ -209,8 +217,9 @@
             flex-flow: row nowrap;
             align-items: center;
             width: 100%;
-            padding: 80px 0px;
-            justify-content: center;
+            padding: 60px 0px;
+            justify-content: space-around;
+            flex: 1;
             &-text{
                 box-sizing: border-box;
                 flex: 1;
@@ -253,7 +262,7 @@
             }
         }
         .block__item_description:nth-child(2){
-            padding-left: 100px;
+            padding-left: 80px;
         }
     }
     &__item:nth-child(5){
@@ -335,15 +344,16 @@
         box-sizing: border-box;
         display: flex;
         justify-content: center;
+        padding: 30px 0px 0px 60px;
         .block__item_article{
             box-sizing: border-box;
-            padding-top: 100px;
             overflow: visible;
             z-index: 1;
             display: flex;
             flex-flow: column wrap;
             flex: 1;
-            max-width: 650px;
+            justify-content: center;
+            max-width: 50%;
             &-title {
                 font-size: 51px;
                 font-family: 'GothamProBold';
@@ -367,10 +377,7 @@
            flex: 0.5;
         }
         img{
-            position: absolute;
-            right: 0;
             margin: auto auto;
-            bottom: calc(50% - 300px);
             max-width: 50%;
             max-height: 100%;
         }
@@ -476,6 +483,7 @@
                 display: flex;
                 flex-flow: column wrap;
                 justify-content: center;
+                margin-left: 85px;
                 .parametrs{
                     display: flex;
                     flex-direction: row-reverse;
@@ -571,6 +579,18 @@
     height: 0px !important;
     padding-top: 0px !important;
     padding-bottom: 0px !important;
+}
+.duration{
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-duration: 2s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-delay: 0s;
+    -webkit-animation-duration: 2s;
+    -moz-animation-iteration-count: 1;
+    -moz-animation-delay: 0s;
+    -moz-animation-duration: 2s; 
+    opacity: 0;
 }
 
 @import '_adaptive';

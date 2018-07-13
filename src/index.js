@@ -1,7 +1,7 @@
 import "./styles/styles";
 import 'owl.carousel';
 
-    /*----slider----*/
+/*----slider----*/
 
 $(document).ready(function () {
     $('.owl-carousel').owlCarousel({
@@ -23,30 +23,97 @@ let block = document.getElementById("technicalParams"),
     button = document.getElementById('buttonForShow'),
     buttonSpan = Array.from(button.getElementsByTagName('span'));
 
+function smoothOpen() {
 
-    function smoothOpen() {
+    block.classList.toggle('hide');
+    buttonSpan[0].classList.toggle('rotate-span');
 
-        block.classList.toggle('hide');     
-        buttonSpan[0].classList.toggle('rotate-span');
+    let buttonCoords = button.getBoundingClientRect(),
+        buttonTop = buttonCoords.top;
 
-        let buttonCoords = button.getBoundingClientRect(),
-            pos = window.pageYOffset,
-            buttonTop = buttonCoords.top;
-        
-        function scrollToBottom() {
-            if (buttonTop > -140 && buttonTop < 200 ) {
-                window.scrollBy(0, 15);
-                buttonTop = buttonTop - 15;
-                setTimeout(scrollToBottom, 15);
-            } else if ( buttonTop > -140 ) {
-                window.scrollBy(0, 25);
-                buttonTop = buttonTop - 25;
-                setTimeout(scrollToBottom, 15);
-            }
-        }
-        if (block.classList.contains('hide') == false) {
-            scrollToBottom();
+    function scrollToBottom() {
+        if (buttonTop > -140 && buttonTop < 200) {
+            window.scrollBy(0, 15);
+            buttonTop = buttonTop - 15;
+            setTimeout(scrollToBottom, 15);
+        } else if (buttonTop > -140) {
+            window.scrollBy(0, 25);
+            buttonTop = buttonTop - 25;
+            setTimeout(scrollToBottom, 15);
         }
     }
-    
-button.addEventListener( 'click', smoothOpen );
+    if (block.classList.contains('hide') == false) {
+        scrollToBottom();
+    }
+}
+button.addEventListener('click', smoothOpen);
+
+function throttle(func, ms) {
+
+    var isThrottled = false,
+        savedArgs,
+        savedThis;
+
+    function wrapper() {
+
+        if (isThrottled) {
+            savedArgs = arguments;
+            savedThis = this;
+            return;
+        }
+
+        func.apply(this, arguments);
+
+        isThrottled = true;
+
+        setTimeout(function () {
+            isThrottled = false;
+            if (savedArgs) {
+                wrapper.apply(savedThis, savedArgs);
+                savedArgs = savedThis = null;
+            }
+        }, ms);
+    }
+    return wrapper;
+};
+let arrImg_left = Array.from(document.getElementsByClassName('animate-target-left')),
+    arrImg_right = Array.from(document.getElementsByClassName('animate-target-right'));
+
+
+window.addEventListener('scroll', throttle(function () {
+    arrImg_left.forEach(elem => {
+        if (window.innerWidth > 1024) {
+            if (elem.getBoundingClientRect().y < 600) {
+                elem.classList.add("animated", "fadeInLeft");
+                // console.log("I can see it");
+            } else {
+                // console.log("no contact");
+            }
+        } else {
+            if (elem.getBoundingClientRect().y < 800) {
+                elem.classList.add("animated", "fadeInLeft");
+                // console.log("I can see it");
+            } else {
+                // console.log("no contact");
+            }
+        }
+    })
+
+    arrImg_right.forEach(elem => {
+        if (window.innerWidth > 1024) {
+        if (elem.getBoundingClientRect().y < 600) {
+            elem.classList.add("animated", "fadeInRight");
+            // console.log("I can see it");
+        } else {
+            // console.log("no contact");
+        }
+    }else {
+        if (elem.getBoundingClientRect().y < 800) {
+            elem.classList.add("animated", "fadeInRight");
+            // console.log("I can see it");
+        } else {
+            // console.log("no contact");
+        }
+    }
+    })
+}, 30))
