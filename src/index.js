@@ -13,7 +13,7 @@ $(document).ready(function () {
         nav: true,
         dots: true,
         items: 1,
-        navText: ["<img class='owl-nav-buttons_img' src='../assets/images/arrow.png'>", "<img class='owl-nav-buttons_img' src='../assets/images/arrow.png'>"]
+        navText: ["<img class='owl-nav-buttons_img' src='./assets/images/arrow.png'>", "<img class='owl-nav-buttons_img' src='./assets/images/arrow.png'>"]
     })
 })
 
@@ -108,7 +108,7 @@ window.addEventListener('scroll', throttle(function () {
             // console.log("no contact");
         }
     }else {
-        if (elem.getBoundingClientRect().y < 800) {
+        if (elem.getBoundingClientRect().y < 700) {
             elem.classList.add("animated", "fadeInRight");
             // console.log("I can see it");
         } else {
@@ -116,4 +116,4 @@ window.addEventListener('scroll', throttle(function () {
         }
     }
     })
-}, 30))
+}, 40))

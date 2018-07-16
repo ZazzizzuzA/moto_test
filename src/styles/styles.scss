@@ -67,7 +67,7 @@
         position: relative;
         background-color: rgb(216, 216, 216);
         padding: 60px 100px 60px 0px;
-        
+        z-index: 10;
         .block__item_article {
             float: right;
             box-sizing: border-box;
@@ -108,6 +108,7 @@
         display: flex;
         flex-flow: row nowrap;
         align-items: center;
+        justify-content: space-between;
         .owl-carousel {
             position: relative;
             width: 50%;
@@ -169,6 +170,7 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
+        z-index: 10;
         .block__item_article {
             box-sizing: border-box;
             flex: 1;
@@ -525,8 +527,7 @@
                     background-color: rgb(38,98,102);
                     left: calc(15px - 7.5px);
                     top: calc(15px - 1px);
-                    transition: all .25s linear;
-                    
+                    transition: all .25s linear;   
                 }
                 .rotate-span{
                     transform: rotate(90deg);
